@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>joy.js demo</title>
+    <style>
+      .joystick {
+        --move-x: 0;
+        --move-y: 0;
+
+        --size: 200px;
+				--inner-size: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: var(--size);
+        height: var(--size);
+        border: 2px solid black;
+        border-radius: 9999px;
+      }
+
+      .joystick .handle {
+        width: var(--inner-size);
+        height: var(--inner-size);
+        border-radius: 9999px;
+        background-color: black;
+
+        transform: translate(var(--move-x), var(--move-y));
+      }
+      body {
+        display: flex;
+      }
+
+    </style>
+  </head>
+  <body>
+    <script type="module">
+      import { Joystick } from "../src/index.js";
+      const myJoystick = new Joystick();
+      document.body.appendChild(myJoystick.dom);
+
+      const angleElement = document.createElement("div");
+      document.body.appendChild(angleElement);
+			myJoystick.dom.style.cssText = 'position: fixed; bottom: 30px; left: 30px;';
+
+      myJoystick.on("move", angle => {
+        angleElement.innerHTML = `angle: ${angle}`;
+      });
+
+      const mynewJoystick = new Joystick();
+      document.body.appendChild(mynewJoystick.dom);
+			mynewJoystick.dom.style.cssText = 'position: fixed; bottom: 30px; right: 30px;';
+
+      const newangleElement = document.createElement("div");
+      document.body.appendChild(newangleElement);
+
+      mynewJoystick.on("move", angle => {
+        newangleElement.innerHTML = `angle: ${angle}`;
+      });
+    </script>
+  </body>
+</html>

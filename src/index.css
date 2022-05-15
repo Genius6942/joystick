@@ -1,0 +1,26 @@
+.joystick {
+	--move-x: 0;
+	--move-y: 0;
+
+	--size: 200px;
+	--inner-size: 75px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: var(--size);
+	height: var(--size);
+	border: 2px solid black;
+	border-radius: 9999px;
+}
+
+.joystick .handle {
+	width: var(--inner-size);
+	height: var(--inner-size);
+	border-radius: 9999px;
+	background-color: black;
+
+	transform: translate(var(--move-x), var(--move-y));
+}
+body {
+	display: flex;
+}
