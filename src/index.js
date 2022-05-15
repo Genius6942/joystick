@@ -1,4 +1,4 @@
-// import './index.css';
+import './index.css';
 
 // a class to contain css styles for an element
 class Styles {

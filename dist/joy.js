@@ -4,7 +4,10 @@
 	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.joy = {}));
 })(this, (function (exports) { 'use strict';
 
-	// import './index.css';
+	var e=[],t=[];function n(n,r){if(n&&"undefined"!=typeof document){var a,s=!0===r.prepend?"prepend":"append",d=!0===r.singleTag,i="string"==typeof r.container?document.querySelector(r.container):document.getElementsByTagName("head")[0];if(d){var u=e.indexOf(i);-1===u&&(u=e.push(i)-1,t[u]={}),a=t[u]&&t[u][s]?t[u][s]:t[u][s]=c();}else a=c();65279===n.charCodeAt(0)&&(n=n.substring(1)),a.styleSheet?a.styleSheet.cssText+=n:a.appendChild(document.createTextNode(n));}function c(){var e=document.createElement("style");if(e.setAttribute("type","text/css"),r.attributes)for(var t=Object.keys(r.attributes),n=0;n<t.length;n++)e.setAttribute(t[n],r.attributes[t[n]]);var a="prepend"===s?"afterbegin":"beforeend";return i.insertAdjacentElement(a,e),e}}
+
+	var css = ".joystick {\n\t--move-x: 0;\n\t--move-y: 0;\n\n\t--size: 200px;\n\t--inner-size: 75px;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\twidth: var(--size);\n\theight: var(--size);\n\tborder: 2px solid black;\n\tborder-radius: 9999px;\n}\n\n.joystick .handle {\n\twidth: var(--inner-size);\n\theight: var(--inner-size);\n\tborder-radius: 9999px;\n\tbackground-color: black;\n\n\ttransform: translate(var(--move-x), var(--move-y));\n}\nbody {\n\tdisplay: flex;\n}";
+	n(css,{});
 
 	// a class to contain css styles for an element
 	class Styles {

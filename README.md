@@ -19,7 +19,7 @@ import { Joystick } from "@fezzle/joystick";
 ### script tag
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@fezzle/joystick@1.1.1/dist/joy.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fezzle/joystick"></script>
 ```
 
 
