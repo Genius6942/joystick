@@ -4,8 +4,13 @@
   "type": "module",
   "description": "Joystick module for client side application",
   "main": "dist/joy.js",
-	"module": "dist/joy.module.js",
+  "module": "dist/joy.module.js",
   "types": "types/index.d.ts",
+  "homepage": "https://github.com/Genius6942/joystick",
+  "repository": {
+    "url": "https://github.com/Genius6942/joystick",
+    "type": "git"
+  },
   "scripts": {
     "build": "rollup -c rollup.config.js && tsc && npm run minify",
     "minify": "uglifyjs ./dist/joy.js -o ./dist/joy.min.js"
