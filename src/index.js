@@ -204,6 +204,7 @@ class Joystick {
 
       this.events.start.forEach(callback => callback(this.angle, this.grabber.grabbing));
     } else if (e.type === "touchend") {
+			if (e.changedTouches[0].identifier !== this.touchIdentifier) return;
       this.grabber.grabbing = false;
       this.handlePosition = {
         x: 0,
