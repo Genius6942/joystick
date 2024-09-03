@@ -13,13 +13,13 @@ npm install joystick
 ```
 
 ```js
-import { Joystick } from "@fezzle/joystick";
+import { Joystick } from "@haelp/joystick";
 ```
 
 ### script tag
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@fezzle/joystick"></script>
+<script src="https://cdn.jsdelivr.net/npm/@haelp/joystick"></script>
 ```
 
 
@@ -36,5 +36,5 @@ joystick.style.cssText = "position: fixed; bottom: 30px; left:30px;";
 
 joystick.on("move", (angle) => {
   console.log('Joystick angle:', angle);
-}
+});
 ```
